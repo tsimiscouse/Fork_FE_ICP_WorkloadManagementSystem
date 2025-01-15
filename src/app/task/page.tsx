@@ -149,7 +149,7 @@ export default function TaskPageId() {
   if (error) {
     return (
       <div className="flex h-screen bg-stale-50">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <div className="flex-grow flex items-center justify-center">
           <div className="text-red-500">Error: {error}</div>
         </div>
