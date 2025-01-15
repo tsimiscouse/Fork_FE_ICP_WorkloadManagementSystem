@@ -160,7 +160,7 @@ export default function TaskPageId() {
   return (
 
     <div className="flex h-screen bg-stale-50">
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div className="flex-grow overflow-auto flex items-start justify-center">
         <div className="flex-1 max-h-screen w-[80vw] ml-[0.417vw] py-[1vw] px-[1.667vw] space-y-[1.25vw]">
           <SearchBar />

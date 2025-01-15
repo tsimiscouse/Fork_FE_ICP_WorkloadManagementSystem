@@ -178,7 +178,7 @@ const Login = () => {
         <div className="w-full lg:w-1/2 p-[2vw] md:p-[3vw]">
           <div className="max-w-[30vw] mx-auto">
             <h2 className="text-[2vw] font-bold text-gray-900 mb-[1vw]">
-              TRIAL 1
+              TRIAL Unattached Sidebar
             </h2>
             <p className="text-[1vw] text-gray-600 mb-[2vw]">
               Please sign in to continue
