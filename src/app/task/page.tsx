@@ -158,7 +158,7 @@ export default function TaskPageId() {
   }
 
   return (
-    <ProtectedRoute>
+
     <div className="flex h-screen bg-stale-50">
       <Sidebar />
       <div className="flex-grow overflow-auto flex items-start justify-center">
@@ -201,7 +201,6 @@ export default function TaskPageId() {
         onTaskSubmit={handleSubmit}
       />
     </div>
-    </ProtectedRoute>
 
   );
 }

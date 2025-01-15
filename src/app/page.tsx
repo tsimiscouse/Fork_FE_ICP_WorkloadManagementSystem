@@ -47,26 +47,22 @@ const Login = () => {
       const token = Cookies.get("auth_token");
       if (token) {
         try {
-          const decoded = jwtDecode<UserData>(token);
+          const decoded = jwtDecode<UserData>(token); // Make sure token is valid
           const currentTime = Date.now() / 1000;
-  
           if (decoded.exp > currentTime) {
-            // Token is valid, navigate to dashboard
             router.push("/dashboard");
           } else {
-            // Expired token, remove it
-            Cookies.remove("auth_token");
+            Cookies.remove("auth_token"); // Remove expired token
           }
         } catch (error) {
-          // Invalid token, clear it
-          Cookies.remove("auth_token");
+          console.error("Failed to decode token:", error);
+          Cookies.remove("auth_token"); // Handle invalid token case
         }
       }
     };
-  
+
     checkAuthentication();
   }, [router]);
-  
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -182,7 +178,7 @@ const Login = () => {
         <div className="w-full lg:w-1/2 p-[2vw] md:p-[3vw]">
           <div className="max-w-[30vw] mx-auto">
             <h2 className="text-[2vw] font-bold text-gray-900 mb-[1vw]">
-              Welcome back
+              TRIAL 1
             </h2>
             <p className="text-[1vw] text-gray-600 mb-[2vw]">
               Please sign in to continue
